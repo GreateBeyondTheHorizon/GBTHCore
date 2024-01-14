@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "greatebth.gbthcore.mixin",
+	"minVersion": "0.8",
+	"compatibilityLevel": "JAVA_16",
+	"mixins": [
+		"WaterFluidMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"refmap": "gbthcore.mixin-refmap.json"
+}
