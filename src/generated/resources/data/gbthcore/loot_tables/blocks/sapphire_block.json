@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "gbthcore:pebble_block"
+          "name": "gbthcore:sapphire_block"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "gbthcore:blocks/pebble_block"
+  "random_sequence": "gbthcore:blocks/sapphire_block"
 }

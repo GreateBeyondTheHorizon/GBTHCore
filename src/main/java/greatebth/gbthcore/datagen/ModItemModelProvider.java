@@ -18,7 +18,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.STONE_PEBBLE);
-      //  simpleItem(ModItems.SAPPHIRE);
+        simpleItem(ModItems.SAPPHIRE);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

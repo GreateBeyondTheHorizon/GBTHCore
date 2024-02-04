@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "gbthcore:item/stone_pebble"
+    "layer0": "gbthcore:item/sapphire"
   }
 }

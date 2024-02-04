@@ -22,6 +22,9 @@ public class ModCreativeModTabs {
                     .displayItems((parmeters, output)-> {
                         output.accept(ModItems.STONE_PEBBLE.get());
                         output.accept(ModBlocks.PEBBLE_BLOCK.get());
+                        output.accept(ModItems.SAPPHIRE.get());
+                        output.accept(ModBlocks.SAPPHIRE_BLOCK.get());
+                        output.accept(ModBlocks.SAPPHIRE_ORE.get());
                     })
                     .build());
 
