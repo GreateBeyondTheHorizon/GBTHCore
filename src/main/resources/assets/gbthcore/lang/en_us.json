@@ -1,0 +1,23 @@
+{
+
+  "item.gbthcore.stone_pebble": "Stone Pebble",
+
+  "block.gbthcore.pebble_block": "Pebble",
+
+
+
+  "item.gbthcore.sapphire": "Sapphire",
+  "item.gbthcore.raw_sapphire": "Raw Sapphire",
+
+  "block.gbthcore.sapphire_block": "Block of Sapphire",
+  "block.gbthcore.raw_sapphire_block": "Block of Raw Sapphire",
+
+  "block.gbthcore.sapphire_ore": "Sapphire Ore",
+  "block.gbthcore.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.gbthcore.end_stone_sapphire_ore": "Endstone Sapphire Ore",
+  "block.gbthcore.nether_sapphire_ore": "Nether Sapphire Ore",
+
+
+
+  "creativetab.gbthcore_tab": "GBTHCore"
+}
