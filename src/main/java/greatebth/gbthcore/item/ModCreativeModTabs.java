@@ -17,14 +17,13 @@ public class ModCreativeModTabs {
 
     public static final RegistryObject<CreativeModeTab> GBTHCore_TAB = CREATIVE_MODE_TABS.register("gbthcore_tab",
             () -> CreativeModeTab.builder()
-                    .icon(()-> new ItemStack(ModItems.STONE_PEBBLE.get()))
+                    .icon(()-> new ItemStack(ModItems.FIRE_STICK.get()))
                     .title(Component.translatable("creativetab.gbthcore_tab"))
                     .displayItems((parmeters, output)-> {
-                        output.accept(ModItems.STONE_PEBBLE.get());
-                        output.accept(ModBlocks.PEBBLE_BLOCK.get());
-                        output.accept(ModItems.SAPPHIRE.get());
-                        output.accept(ModBlocks.SAPPHIRE_BLOCK.get());
-                        output.accept(ModBlocks.SAPPHIRE_ORE.get());
+
+                        output.accept(ModItems.FIRE_STICK.get());
+
+
                     })
                     .build());
 

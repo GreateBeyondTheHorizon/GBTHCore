@@ -20,11 +20,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        this.tag(ModTags.Blocks.PEBBLES)
-                .add(ModBlocks.PEBBLE_BLOCK.get()).addTag(Tags.Blocks.STONE);
 
-        this.tag(BlockTags.NEEDS_STONE_TOOL)
-               .add(ModBlocks.SAPPHIRE_BLOCK.get());
+
     }
 
 }

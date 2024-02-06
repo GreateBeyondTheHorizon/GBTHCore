@@ -2,7 +2,11 @@
 
   "item.gbthcore.stone_pebble": "Stone Pebble",
 
-  "block.gbthcore.pebble_block": "Pebble",
+  "block.gbthcore.pebble_block": "Pebble Block",
+
+  "item.gbthcore.twig": "Twig",
+
+  "block.gbthcore.twig_block": "Twig Block",
 
 
 

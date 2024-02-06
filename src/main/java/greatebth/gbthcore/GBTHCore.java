@@ -52,8 +52,7 @@ public class GBTHCore
 
     private void addCreative(BuildCreativeModeTabContentsEvent event){
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.SAPPHIRE);
-            event.accept(ModItems.STONE_PEBBLE);
+            event.accept(ModItems.FIRE_STICK);
 
         }
     }
