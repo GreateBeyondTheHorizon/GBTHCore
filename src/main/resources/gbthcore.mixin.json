@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "greatebth.gbthcore.mixin",
+	"package": "com.gbth.gbthcore.mixin",
 	"minVersion": "0.8",
 	"compatibilityLevel": "JAVA_16",
 	"mixins": [

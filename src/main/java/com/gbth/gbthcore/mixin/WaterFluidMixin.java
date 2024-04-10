@@ -1,6 +1,6 @@
-package greatebth.gbthcore.mixin;
+package com.gbth.gbthcore.mixin;
 
-import greatebth.gbthcore.ServerConfig;
+import com.gbth.gbthcore.ServerConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.Level;

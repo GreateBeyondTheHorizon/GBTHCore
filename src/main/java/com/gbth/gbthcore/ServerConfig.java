@@ -1,4 +1,4 @@
-package greatebth.gbthcore;
+package com.gbth.gbthcore;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;

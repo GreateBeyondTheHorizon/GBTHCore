@@ -1,5 +1,7 @@
-package greatebth.gbthcore;
+package com.gbth.gbthcore;
 
+import com.gregtechceu.gtceu.api.machine.MachineDefinition;
+import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -32,6 +34,12 @@ public class GBTHCore
         ITEMS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
+
+        GBTHCoreRegistries.REGISTRATE.registerRegistrate();
+        GBTHCoreLang.register();
+
+        modEventBus.addGenericListener(MachineDefinition.class, GBTHCoreRegistries::registerMachines);
+        modEventBus.addGenericListener(GTRecipeType.class, GBTHCoreRegistries::registerRecipeTypes);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, ServerConfig.SPEC);
     }
