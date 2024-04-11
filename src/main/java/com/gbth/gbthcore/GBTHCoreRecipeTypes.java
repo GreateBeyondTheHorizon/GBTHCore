@@ -17,7 +17,7 @@ public class GBTHCoreRecipeTypes {
     public static void register() {}
 
     public static final GTRecipeType BLOOMERY_RECIPES = register("bloomery", MULTIBLOCK)
-            .setMaxIOSize(2, 1, 0, 0)
+            .setMaxIOSize(3, 1, 0, 0)
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
             .setSound(GTSoundEntries.FURNACE);
 
