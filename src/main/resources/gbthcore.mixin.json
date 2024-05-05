@@ -1,13 +1,14 @@
 {
-	"required": true,
-	"package": "com.gbth.gbthcore.mixin",
-	"minVersion": "0.8",
-	"compatibilityLevel": "JAVA_16",
-	"mixins": [
-		"WaterFluidMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"refmap": "gbthcore.mixin-refmap.json"
+  "required": true,
+  "package": "com.gbth.gbthcore.mixin",
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "AbstractFurnaceBlockEntityMixin",
+    "WaterFluidMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "gbthcore.mixin-refmap.json"
 }
