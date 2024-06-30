@@ -1,6 +1,6 @@
 package com.gbth.gbthcore;
 
-import static com.gbth.gbthcore.GBTHCoreRegistries.REGISTRATE;
+import static com.gbth.gbthcore.registry.GBTHCoreRegistries.REGISTRATE;
 
 public class GBTHCoreLang {
 

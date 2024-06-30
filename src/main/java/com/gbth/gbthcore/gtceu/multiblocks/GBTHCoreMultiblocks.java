@@ -1,7 +1,7 @@
 package com.gbth.gbthcore.gtceu.multiblocks;
 
 import com.gbth.gbthcore.GBTHCoreRecipeTypes;
-import com.gbth.gbthcore.GBTHCoreRegistries;
+import com.gbth.gbthcore.registry.GBTHCoreRegistries;
 import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.data.RotationState;
 import com.gregtechceu.gtceu.api.machine.MultiblockMachineDefinition;

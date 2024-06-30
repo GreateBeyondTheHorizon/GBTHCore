@@ -1,5 +1,7 @@
-package com.gbth.gbthcore;
+package com.gbth.gbthcore.registry;
 
+import com.gbth.gbthcore.GBTHCore;
+import com.gbth.gbthcore.GBTHCoreRecipeTypes;
 import com.gbth.gbthcore.gtceu.multiblocks.GBTHCoreMultiblocks;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
