@@ -1,4 +1,5 @@
 {
   "block.gbthcore.bloomery": "Bloomery",
-  "gbthcore.bloomery": "Bloomery"
+  "gbthcore.bloomery": "Bloomery",
+  "tagprefix.bloom": "%s Bloom"
 }
