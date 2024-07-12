@@ -4,7 +4,6 @@ import com.gbth.gbthcore.GBTHCore;
 import com.gbth.gbthcore.GBTHCoreRecipeTypes;
 import com.gbth.gbthcore.gtceu.multiblocks.GBTHCoreMultiblocks;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
-import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.PostMaterialEvent;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
