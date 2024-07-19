@@ -1,5 +1,7 @@
 {
   "block.gbthcore.bloomery": "ʎɹǝɯooןᗺ",
+  "block.gbthcore.bronze_large_boiler": "ɹǝןıoᗺ ǝzuoɹᗺ ǝbɹɐꞀ",
   "gbthcore.bloomery": "ʎɹǝɯooןᗺ",
-  "tagprefix.bloom": "ɯooןᗺ %s"
+  "gbthcore.multiblock.large_boiler.fuel_usage": "x%dɟ§ :ǝʇɐᴚ uɹnᗺ ןǝnℲㄥ§",
+  "gbthcore.multiblock.large_boiler.production_efficiency": "x%dɟ§ :ʎɔuǝıɔıɟɟƎ uoıʇɔnpoɹԀㄥ§"
 }

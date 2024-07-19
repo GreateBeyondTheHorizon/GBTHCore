@@ -1,5 +1,6 @@
-package com.gbth.gbthcore;
+package com.gbth.gbthcore.registry;
 
+import com.gbth.gbthcore.GBTHCore;
 import com.gregtechceu.gtceu.api.gui.GuiTextures;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeSerializer;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
@@ -20,7 +21,6 @@ public class GBTHCoreRecipeTypes {
             .setMaxIOSize(3, 1, 0, 0)
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
             .setSound(GTSoundEntries.FURNACE);
-
 
     public static GTRecipeType register(String name, String group, RecipeType<?>... proxyRecipes) {
         GTRecipeType recipeType = new GTRecipeType(new ResourceLocation(GBTHCore.MODID, name), group, proxyRecipes);

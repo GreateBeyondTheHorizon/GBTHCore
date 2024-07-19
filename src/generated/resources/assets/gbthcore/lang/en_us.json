@@ -1,5 +1,7 @@
 {
   "block.gbthcore.bloomery": "Bloomery",
+  "block.gbthcore.bronze_large_boiler": "Large Bronze Boiler",
   "gbthcore.bloomery": "Bloomery",
-  "tagprefix.bloom": "%s Bloom"
+  "gbthcore.multiblock.large_boiler.fuel_usage": "§7Fuel Burn Rate: §f%dx",
+  "gbthcore.multiblock.large_boiler.production_efficiency": "§7Production Efficiency: §f%dx"
 }

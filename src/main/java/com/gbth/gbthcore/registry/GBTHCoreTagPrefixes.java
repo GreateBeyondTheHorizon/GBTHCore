@@ -1,20 +1,21 @@
 package com.gbth.gbthcore.registry;
 
-import com.gbth.gbthcore.gtceu.material.PropertyKeys;
 import com.gbth.gbthcore.gtceu.material.MaterialIconTypes;
+import com.gbth.gbthcore.gtceu.material.PropertyKeys;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
 
 import java.util.function.Predicate;
 
-import static com.gbth.gbthcore.registry.GBTHCoreTagPrefixes.Conditions.*;
+import static com.gbth.gbthcore.registry.GBTHCoreTagPrefixes.Conditions.hasBloomProperty;
 
 public class GBTHCoreTagPrefixes {
 	public static TagPrefix bloom;
 
 	public static void register() {
 		bloom = new TagPrefix("bloom")
+				.langValue("%s Bloom")
 				.defaultTagPath("blooms/%s")
 				.unformattedTagPath("blooms")
 				.materialAmount(GTValues.M)
