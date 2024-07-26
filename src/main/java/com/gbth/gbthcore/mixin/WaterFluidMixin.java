@@ -1,8 +1,10 @@
 package com.gbth.gbthcore.mixin;
 
-import com.gbth.gbthcore.ServerConfig;
+import com.gbth.gbthcore.GBTHConfig;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.material.FlowingFluid;
@@ -14,8 +16,8 @@ import org.spongepowered.asm.mixin.Mixin;
 public abstract class WaterFluidMixin extends FlowingFluid {
 	@Override
 	public boolean canConvertToSource(FluidState state, Level level, BlockPos pos) {
-		for (ResourceKey<Biome> biome : ServerConfig.allowedWaterFlowBiomes) {
-			if (level.getBiome(pos).is(biome)) {
+		for (String biome : GBTHConfig.INSTANCE.allowedWaterSpreadBiomes) {
+			if (level.getBiome(pos).is(new ResourceLocation(biome))) {
 				return true;
 			}
 		}
