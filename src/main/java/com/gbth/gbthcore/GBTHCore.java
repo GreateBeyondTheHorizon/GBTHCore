@@ -1,5 +1,6 @@
 package com.gbth.gbthcore;
 
+import com.gbth.gbthcore.data.GBTHCoreDatagen;
 import com.gbth.gbthcore.registry.GBTHCoreRegistries;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
@@ -25,5 +26,7 @@ public class GBTHCore
         modEventBus.addGenericListener(GTRecipeType.class, GBTHCoreRegistries::registerRecipeTypes);
 
         GBTHConfig.init();
+
+        GBTHCoreDatagen.init();
     }
 }
