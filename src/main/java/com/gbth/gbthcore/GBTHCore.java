@@ -19,11 +19,10 @@ public class GBTHCore
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        GBTHCoreRegistries.REGISTRATE.registerRegistrate();
-        GBTHCoreLang.register();
-
         modEventBus.addGenericListener(MachineDefinition.class, GBTHCoreRegistries::registerMachines);
         modEventBus.addGenericListener(GTRecipeType.class, GBTHCoreRegistries::registerRecipeTypes);
+
+        GBTHCoreRegistries.REGISTRATE.registerRegistrate();
 
         GBTHConfig.init();
 
