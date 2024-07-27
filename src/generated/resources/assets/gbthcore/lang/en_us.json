@@ -2,6 +2,7 @@
   "block.gbthcore.bloomery": "Bloomery",
   "config.gbthcore.option.allowedWaterSpreadBiomes": "allowedWaterSpreadBiomes",
   "config.gbthcore.option.restrictWaterSpread": "restrictWaterSpread",
+  "config.screen.gbthcore": "GBTHCore Config",
   "gbthcore.bloomery": "Bloomery",
   "tagprefix.bloom": "%s Bloom"
 }
