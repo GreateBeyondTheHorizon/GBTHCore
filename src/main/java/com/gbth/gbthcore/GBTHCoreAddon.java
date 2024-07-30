@@ -1,5 +1,6 @@
 package com.gbth.gbthcore;
 
+import com.gbth.gbthcore.registry.GBTHCoreItems;
 import com.gbth.gbthcore.registry.GBTHCoreRegistries;
 import com.gbth.gbthcore.registry.GBTHCoreTagPrefixes;
 import com.gregtechceu.gtceu.api.addon.GTAddon;
@@ -16,7 +17,9 @@ public class GBTHCoreAddon implements IGTAddon {
     }
 
     @Override
-    public void initializeAddon() {}
+    public void initializeAddon() {
+        GBTHCoreItems.register();
+    }
 
     @Override
     public String addonModId() {

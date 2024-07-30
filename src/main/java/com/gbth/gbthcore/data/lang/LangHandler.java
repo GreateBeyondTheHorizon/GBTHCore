@@ -7,6 +7,5 @@ public class LangHandler {
 		ConfigurationLang.init(provider);
 
 		provider.add("gbthcore.bloomery", "Bloomery");
-		provider.add("tagprefix.bloom", "%s Bloom");
 	}
 }
