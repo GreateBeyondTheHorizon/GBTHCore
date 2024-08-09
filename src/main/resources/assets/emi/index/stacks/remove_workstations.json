@@ -1,0 +1,13 @@
+{
+    "removed":
+    [
+        "item:gtceu:prospector.lv",
+        "item:gtceu:prospector.hv",
+        "item:gtceu:prospector.luv"
+    ],
+    "filters":
+    [
+        "/gtceu:prospector/"
+    ],
+    "disable": true
+}
