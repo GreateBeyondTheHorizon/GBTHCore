@@ -1,6 +1,6 @@
 package com.gbth.gbthcore.registry;
 
-import com.gbth.gbthcore.gtceu.common.item.AdvancedProspectorScannerBehavior;
+import com.gbth.gbthcore.integration.gtceu.common.item.AdvancedProspectorScannerBehavior;
 import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.gui.misc.ProspectorMode;

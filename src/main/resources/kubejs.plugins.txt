@@ -1,1 +1,1 @@
-com.gbth.gbthcore.compat.kubejs.GBTHCoreKubeJSPlugin
+com.gbth.gbthcore.integration.kubejs.GBTHCoreKubeJSPlugin

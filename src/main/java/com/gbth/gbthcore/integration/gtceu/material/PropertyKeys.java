@@ -1,4 +1,4 @@
-package com.gbth.gbthcore.gtceu.material;
+package com.gbth.gbthcore.integration.gtceu.material;
 
 import com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey;
 

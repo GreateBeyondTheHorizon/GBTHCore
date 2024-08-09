@@ -1,7 +1,7 @@
-package com.gbth.gbthcore.compat.kubejs;
+package com.gbth.gbthcore.integration.kubejs;
 
-import com.gbth.gbthcore.gtceu.material.MaterialFlags;
-import com.gbth.gbthcore.gtceu.material.PropertyKeys;
+import com.gbth.gbthcore.integration.gtceu.material.MaterialFlags;
+import com.gbth.gbthcore.integration.gtceu.material.PropertyKeys;
 import dev.latvian.mods.kubejs.KubeJSPlugin;
 import dev.latvian.mods.kubejs.script.BindingsEvent;
 

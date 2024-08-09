@@ -1,4 +1,4 @@
-package com.gbth.gbthcore.gtceu.multiblocks;
+package com.gbth.gbthcore.integration.gtceu.multiblocks;
 
 import com.gbth.gbthcore.GBTHCoreRecipeTypes;
 import com.gbth.gbthcore.registry.GBTHCoreRegistries;

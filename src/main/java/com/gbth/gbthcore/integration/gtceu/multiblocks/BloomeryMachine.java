@@ -1,4 +1,4 @@
-package com.gbth.gbthcore.gtceu.multiblocks;
+package com.gbth.gbthcore.integration.gtceu.multiblocks;
 
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.gui.GuiTextures;

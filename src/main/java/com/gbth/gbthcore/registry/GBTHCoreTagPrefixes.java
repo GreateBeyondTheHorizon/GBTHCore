@@ -1,7 +1,7 @@
 package com.gbth.gbthcore.registry;
 
-import com.gbth.gbthcore.gtceu.material.MaterialIconTypes;
-import com.gbth.gbthcore.gtceu.material.PropertyKeys;
+import com.gbth.gbthcore.integration.gtceu.material.MaterialIconTypes;
+import com.gbth.gbthcore.integration.gtceu.material.PropertyKeys;
 import com.gregtechceu.gtceu.api.GTValues;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;

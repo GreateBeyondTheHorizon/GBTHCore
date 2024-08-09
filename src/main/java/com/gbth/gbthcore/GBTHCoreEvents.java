@@ -1,6 +1,6 @@
 package com.gbth.gbthcore;
 
-import com.gbth.gbthcore.gtceu.multiblocks.GBTHCoreMultiblocks;
+import com.gbth.gbthcore.integration.gtceu.multiblocks.GBTHCoreMultiblocks;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;

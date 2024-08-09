@@ -1,4 +1,4 @@
-package com.gbth.gbthcore.gtceu.common.item;
+package com.gbth.gbthcore.integration.gtceu.common.item;
 
 import com.gbth.gbthcore.mixin.ProspectorScannerBehaviorAccessor;
 import com.gregtechceu.gtceu.api.GTValues;
