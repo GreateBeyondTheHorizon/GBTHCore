@@ -2,7 +2,6 @@ package com.gbth.gbthcore.data.lang;
 
 import com.gbth.gbthcore.GBTHConfig;
 import com.gbth.gbthcore.GBTHCore;
-
 import com.tterrag.registrate.providers.RegistrateLangProvider;
 import dev.toma.configuration.Configuration;
 import dev.toma.configuration.config.format.ConfigFormats;
@@ -15,7 +14,7 @@ import java.util.Set;
 
 public class ConfigurationLang {
 
-	public static void init(RegistrateLangProvider provider) {
+	public static void register(RegistrateLangProvider provider) {
 		provider.add("config.screen.gbthcore", "GBTHCore Config");
 		dfs(provider, new HashSet<>(),
 				Configuration.registerConfig(GBTHConfig.class, ConfigFormats.yaml()).getValueMap());

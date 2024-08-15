@@ -4,8 +4,9 @@ import com.tterrag.registrate.providers.RegistrateLangProvider;
 
 public class LangHandler {
 	public static void init(RegistrateLangProvider provider) {
-		ConfigurationLang.init(provider);
+		ConfigurationLang.register(provider);
 
 		provider.add("gbthcore.bloomery", "Bloomery");
+		provider.add("tagprefix.bloom", "%s Bloom");
 	}
 }

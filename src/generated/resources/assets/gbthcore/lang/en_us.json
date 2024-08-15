@@ -6,5 +6,6 @@
   "gbthcore.bloomery": "Bloomery",
   "item.gbthcore.prospector_hv": "Advanced Prospector (HV)",
   "item.gbthcore.prospector_luv": "Super Prospector (LuV)",
-  "item.gbthcore.prospector_lv": "Ore Prospector (LV)"
+  "item.gbthcore.prospector_lv": "Ore Prospector (LV)",
+  "tagprefix.bloom": "%s Bloom"
 }
