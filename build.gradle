@@ -92,8 +92,13 @@ repositories {
     maven { url = 'https://maven.firstdarkdev.xyz/snapshots'
         content {
             includeGroup 'com.lowdragmc.ldlib'
-            includeGroup 'com.gregtechceu.gtceu'
             includeGroup 'dev.toma.configuration'
+        }
+    }
+
+    maven { url = 'https://maven.gtceu.com'
+        content {
+            includeGroup 'com.gregtechceu.gtceu'
         }
     }
 
