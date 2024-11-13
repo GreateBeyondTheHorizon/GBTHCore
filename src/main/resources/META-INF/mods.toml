@@ -15,6 +15,13 @@ authors="${mod_authors}"
 description='''${mod_description}'''
 
 [[dependencies.${mod_id}]]
+    modId="gtceu"
+    mandatory=true
+    versionRange="${gtceu_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
     modId="aether"
     mandatory=true
     versionRange="${aether_version_range}"
