@@ -38,7 +38,7 @@ public class GBTHCoreItems {
                             ConfigHolder.INSTANCE.machines.doBedrockOres ? ProspectorMode.BEDROCK_ORE : null)))
             .register();
 
-    public static ItemEntry<ComponentItem> PROSPECTOR_LUV = REGISTRATE
+    public static ItemEntry<ComponentItem> PROSPECTOR_LuV = REGISTRATE
             .item("prospector_luv", ComponentItem::create)
             .lang("Super Prospector (LuV)")
             .model((c, p) -> p.withExistingParent("prospector_luv", "item/generated")

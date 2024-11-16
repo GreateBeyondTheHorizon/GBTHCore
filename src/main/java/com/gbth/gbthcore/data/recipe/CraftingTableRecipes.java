@@ -55,7 +55,7 @@ public class CraftingTableRecipes {
         for (ItemEntry<? extends Item> battery : ToolRecipeHandler.batteryItems.get(LuV)) {
             VanillaRecipeHelper.addShapedEnergyTransferRecipe(provider, true, false, true,
                     "prospector_" + battery.getId().getPath(),
-                    Ingredient.of(battery), GBTHCoreItems.PROSPECTOR_LUV.asStack(),
+                    Ingredient.of(battery), GBTHCoreItems.PROSPECTOR_LuV.asStack(),
                     "EPS", "CDC", "PBP",
                     'E', GTItems.EMITTER_LuV.asStack(),
                     'P', new UnificationEntry(plate, GTMaterials.RhodiumPlatedPalladium),

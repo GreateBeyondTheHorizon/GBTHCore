@@ -15,10 +15,10 @@ public class GBTHCoreEmiPlugin implements EmiPlugin {
     public void register(EmiRegistry emiRegistry) {
         emiRegistry.addWorkstation(GTOreVeinEmiCategory.CATEGORY, EmiStack.of(GBTHCoreItems.PROSPECTOR_LV));
         emiRegistry.addWorkstation(GTOreVeinEmiCategory.CATEGORY, EmiStack.of(GBTHCoreItems.PROSPECTOR_HV));
-        emiRegistry.addWorkstation(GTOreVeinEmiCategory.CATEGORY, EmiStack.of(GBTHCoreItems.PROSPECTOR_LUV));
+        emiRegistry.addWorkstation(GTOreVeinEmiCategory.CATEGORY, EmiStack.of(GBTHCoreItems.PROSPECTOR_LuV));
 
         emiRegistry.addWorkstation(GTBedrockFluidEmiCategory.CATEGORY, EmiStack.of(GBTHCoreItems.PROSPECTOR_LV));
         emiRegistry.addWorkstation(GTBedrockFluidEmiCategory.CATEGORY, EmiStack.of(GBTHCoreItems.PROSPECTOR_HV));
-        emiRegistry.addWorkstation(GTBedrockFluidEmiCategory.CATEGORY, EmiStack.of(GBTHCoreItems.PROSPECTOR_LUV));
+        emiRegistry.addWorkstation(GTBedrockFluidEmiCategory.CATEGORY, EmiStack.of(GBTHCoreItems.PROSPECTOR_LuV));
     }
 }
