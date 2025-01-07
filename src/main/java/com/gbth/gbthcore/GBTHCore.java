@@ -16,7 +16,7 @@ import org.slf4j.Logger;
 public class GBTHCore
 {
     public static final String MODID = "gbthcore";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
     public GBTHCore()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();

@@ -2,7 +2,7 @@ package com.gbth.gbthcore.common.data;
 
 import com.gbth.gbthcore.GBTHCore;
 import com.gregtechceu.gtceu.common.data.GTCreativeModeTabs.RegistrateDisplayItemsGenerator;
-import com.gregtechceu.gtceu.common.data.GTMachines;
+import com.gregtechceu.gtceu.common.data.machines.GTMultiMachines;
 import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.minecraft.world.item.CreativeModeTab;
 
@@ -17,7 +17,7 @@ public class GBTHCoreCreativeTabs {
     static {
         MACHINE = REGISTRATE.defaultCreativeTab("machine", b -> {
             b.displayItems(new RegistrateDisplayItemsGenerator("machine", REGISTRATE))
-                    .icon(GTMachines.ELECTRIC_BLAST_FURNACE::asStack)
+                    .icon(GTMultiMachines.ELECTRIC_BLAST_FURNACE::asStack)
                     .title(REGISTRATE.addLang("itemGroup", GBTHCore.id("machine"), "GBTHCore Machines"))
                     .build();
         }).register();
