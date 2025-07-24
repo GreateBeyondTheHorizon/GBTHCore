@@ -11,6 +11,7 @@ import com.gregtechceu.gtceu.api.pattern.FactoryBlockPattern;
 import com.gregtechceu.gtceu.api.pattern.Predicates;
 import com.gregtechceu.gtceu.common.data.GTRecipeTypes;
 import com.gregtechceu.gtceu.common.machine.multiblock.steam.SteamParallelMultiblockMachine;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 
@@ -28,6 +29,7 @@ public class GBTHCoreMultiblocks {
             .rotationState(RotationState.NON_Y_AXIS)
             .recipeType(GBTHCoreRecipeTypes.BLOOMERY_RECIPES)
             .appearanceBlock(CASING_PRIMITIVE_BRICKS)
+            .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip", Component.translatable("gbthcore.bloomery")))
             .pattern(def -> FactoryBlockPattern.start()
                     .aisle("SMS", "#M#", "#M#")
                     .aisle("MMM", "M#M", "M#M")
@@ -37,13 +39,14 @@ public class GBTHCoreMultiblocks {
                     .where("#", Predicates.air())
                     .where("C", Predicates.controller(blocks(def.get())))
                     .build())
-            .workableCasingRenderer(new ResourceLocation("block/mud_bricks"), GTCEu.id("block/multiblock/primitive_blast_furnace"), false)
+            .workableCasingModel(new ResourceLocation("block/mud_bricks"), GTCEu.id("block/multiblock/primitive_blast_furnace"))
             .register();
 
     public static final MultiblockMachineDefinition STEAM_CENTRIFUGE = REGISTRATE.multiblock("steam_centrifuge", SteamParallelMultiblockMachine::new)
             .rotationState(RotationState.ALL)
             .recipeType(GTRecipeTypes.CENTRIFUGE_RECIPES)
             .appearanceBlock(CASING_STEEL_SOLID)
+            .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip", Component.translatable("gtceu.centrifuge")))
             .recipeModifier(SteamParallelMultiblockMachine::recipeModifier, true)
             .addOutputLimit(ItemRecipeCapability.CAP, 1)
             .pattern(def -> FactoryBlockPattern.start()
@@ -58,13 +61,14 @@ public class GBTHCoreMultiblocks {
                             .or(Predicates.abilities(PartAbility.STEAM).setExactLimit(1)))
                     .where('C', blocks(FIREBOX_STEEL.get()))
                     .build())
-            .workableCasingRenderer(GTCEu.id("block/casings/solid/machine_casing_solid_steel"), GTCEu.id("block/machines/centrifuge"))
+            .workableCasingModel(GTCEu.id("block/casings/solid/machine_casing_solid_steel"), GTCEu.id("block/machines/centrifuge"))
             .register();
 
     public static final MultiblockMachineDefinition STEAM_ALLOY_SMELTER = REGISTRATE.multiblock("steam_alloy_smelter", SteamParallelMultiblockMachine::new)
             .rotationState(RotationState.ALL)
             .recipeType(GTRecipeTypes.ALLOY_SMELTER_RECIPES)
             .appearanceBlock(CASING_STEEL_SOLID)
+            .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip", Component.translatable("gtceu.alloy_smelter")))
             .recipeModifier(SteamParallelMultiblockMachine::recipeModifier, true)
             .addOutputLimit(ItemRecipeCapability.CAP, 1)
             .pattern(def -> FactoryBlockPattern.start()
@@ -79,13 +83,14 @@ public class GBTHCoreMultiblocks {
                             .or(Predicates.abilities(PartAbility.STEAM).setExactLimit(1)))
                     .where('C', blocks(FIREBOX_STEEL.get()))
                     .build())
-            .workableCasingRenderer(GTCEu.id("block/casings/solid/machine_casing_solid_steel"), GTCEu.id("block/machines/alloy_smelter"))
+            .workableCasingModel(GTCEu.id("block/casings/solid/machine_casing_solid_steel"), GTCEu.id("block/machines/alloy_smelter"))
             .register();
 
     public static final MultiblockMachineDefinition STEAM_EXTRACTOR = REGISTRATE.multiblock("steam_extractor", SteamParallelMultiblockMachine::new)
             .rotationState(RotationState.ALL)
             .recipeType(GTRecipeTypes.EXTRACTOR_RECIPES)
             .appearanceBlock(CASING_STEEL_SOLID)
+            .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip", Component.translatable("gtceu.extractor")))
             .recipeModifier(SteamParallelMultiblockMachine::recipeModifier, true)
             .addOutputLimit(ItemRecipeCapability.CAP, 1)
             .pattern(def -> FactoryBlockPattern.start()
@@ -100,7 +105,7 @@ public class GBTHCoreMultiblocks {
                             .or(Predicates.abilities(PartAbility.STEAM).setExactLimit(1)))
                     .where('C', blocks(FIREBOX_STEEL.get()))
                     .build())
-            .workableCasingRenderer(GTCEu.id("block/casings/solid/machine_casing_solid_steel"), GTCEu.id("block/machines/extractor"))
+            .workableCasingModel(GTCEu.id("block/casings/solid/machine_casing_solid_steel"), GTCEu.id("block/machines/extractor"))
             .register();
 
     public static void register() {}

@@ -1,6 +1,0 @@
-// 1.20.1	2024-09-14T16:21:55.0925553	Registrate Provider for gbthcore [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
-c60d641a4e46ec6a1f2aac723e49568697cb59ef assets/gbthcore/lang/en_ud.json
-9ebf5c06bd8ff271964aa20a9af47072c94a124c assets/gbthcore/lang/en_us.json
-4e2c0b7b5fb63d6237a976a9ca8d84fb27c649b0 assets/gbthcore/models/item/prospector_hv.json
-1e4f1233f0b52f508b9e9dcdb413aaa3ea54a153 assets/gbthcore/models/item/prospector_luv.json
-bd361a05901bc5b64ccdff88bb6560c9c61d7542 assets/gbthcore/models/item/prospector_lv.json

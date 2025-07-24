@@ -17,8 +17,7 @@ public class GBTHCore
 {
     public static final String MODID = "gbthcore";
     public static final Logger LOGGER = LogUtils.getLogger();
-    public GBTHCore()
-    {
+    public GBTHCore() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addGenericListener(MachineDefinition.class, GBTHCoreRegistries::registerMachines);

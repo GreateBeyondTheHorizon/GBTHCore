@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 @Mixin(ProspectorScannerBehavior.class)
 public interface ProspectorScannerBehaviorAccessor {
 
-    @Accessor public int getRadius();
+    @Accessor(remap = false) public int getRadius();
 
-    @Accessor public long getCost();
+    @Accessor(remap = false) public long getCost();
 }

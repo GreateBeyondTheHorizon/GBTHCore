@@ -1,0 +1,18 @@
+// 1.20.1	2025-07-24T12:23:26.273893218	Registrate Provider for gbthcore [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+6747a2aa82f418ef64c33c4529e230201f2c1795 assets/gbthcore/blockstates/bloomery.json
+6ffb4da49f51736a25ee689144703567766ff747 assets/gbthcore/blockstates/steam_alloy_smelter.json
+8df8a407945db6378e6ce4add15f9ed197afd435 assets/gbthcore/blockstates/steam_centrifuge.json
+a9d67c9617abce4759edf83cd0de9b160d3aef55 assets/gbthcore/blockstates/steam_extractor.json
+c60d641a4e46ec6a1f2aac723e49568697cb59ef assets/gbthcore/lang/en_ud.json
+9ebf5c06bd8ff271964aa20a9af47072c94a124c assets/gbthcore/lang/en_us.json
+03290464fad45d8d073e658d09cb25ea9b8940fa assets/gbthcore/models/block/machine/bloomery.json
+2b4d2e02bd64354f36e044ce967a3905851af1c7 assets/gbthcore/models/block/machine/steam_alloy_smelter.json
+28f5918d62ca72903058e11fbfba67b41987d5e1 assets/gbthcore/models/block/machine/steam_centrifuge.json
+a47701902dfb4d73291e95a63e92bff9421aa231 assets/gbthcore/models/block/machine/steam_extractor.json
+20029970bafb44932f6521ed2d97c0de0f704ef6 assets/gbthcore/models/item/bloomery.json
+4e2c0b7b5fb63d6237a976a9ca8d84fb27c649b0 assets/gbthcore/models/item/prospector_hv.json
+1e4f1233f0b52f508b9e9dcdb413aaa3ea54a153 assets/gbthcore/models/item/prospector_luv.json
+bd361a05901bc5b64ccdff88bb6560c9c61d7542 assets/gbthcore/models/item/prospector_lv.json
+7a6da88091c514e194e7b25f1fed7dd395eee69a assets/gbthcore/models/item/steam_alloy_smelter.json
+872c41def5a1e8220a47a4254cdf4d89cbecd87d assets/gbthcore/models/item/steam_centrifuge.json
+884d11594e1282259eca18293ab3ad4437cae1b2 assets/gbthcore/models/item/steam_extractor.json

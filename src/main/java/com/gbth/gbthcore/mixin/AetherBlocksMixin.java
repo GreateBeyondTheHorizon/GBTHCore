@@ -19,7 +19,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(AetherBlocks.class)
 public class AetherBlocksMixin {
 
-    @Shadow @Final public static RegistryObject<Block> AMBROSIUM_BLOCK;
+    @Shadow(remap = false) @Final public static RegistryObject<Block> AMBROSIUM_BLOCK;
 
     @Inject(method = "registerFuels", at = @At("RETURN"), remap = false)
     private static void gbthcore$registerFuels(CallbackInfo ci) {
