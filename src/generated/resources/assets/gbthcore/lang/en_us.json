@@ -1,5 +1,6 @@
 {
   "block.gbthcore.bloomery": "Bloomery",
+  "block.gbthcore.rock_blaster": "Rock Blaster",
   "block.gbthcore.steam_alloy_smelter": "Steam Alloy Smelter",
   "block.gbthcore.steam_centrifuge": "Steam Centrifuge",
   "block.gbthcore.steam_extractor": "Steam Extractor",
@@ -7,6 +8,7 @@
   "config.gbthcore.option.restrictWaterSpread": "restrictWaterSpread",
   "config.screen.gbthcore": "GBTHCore Config",
   "gbthcore.bloomery": "Bloomery",
+  "gbthcore.rock_blaster": "Rock Blaster",
   "item.gbthcore.prospector_hv": "Advanced Prospector (HV)",
   "item.gbthcore.prospector_luv": "Super Prospector (LuV)",
   "item.gbthcore.prospector_lv": "Ore Prospector (LV)",

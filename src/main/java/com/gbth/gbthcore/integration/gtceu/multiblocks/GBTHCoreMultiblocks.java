@@ -13,9 +13,11 @@ import com.gregtechceu.gtceu.common.data.GTRecipeTypes;
 import com.gregtechceu.gtceu.common.machine.multiblock.steam.SteamParallelMultiblockMachine;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
 
 import static com.gbth.gbthcore.registry.GBTHCoreRegistries.REGISTRATE;
+import static com.gregtechceu.gtceu.api.pattern.Predicates.blockTag;
 import static com.gregtechceu.gtceu.api.pattern.Predicates.blocks;
 import static com.gregtechceu.gtceu.common.data.GTBlocks.*;
 
@@ -38,6 +40,26 @@ public class GBTHCoreMultiblocks {
                     .where("M", blocks(Blocks.MUD_BRICKS))
                     .where("#", Predicates.air())
                     .where("C", Predicates.controller(blocks(def.get())))
+                    .build())
+            .workableCasingModel(new ResourceLocation("block/mud_bricks"), GTCEu.id("block/multiblock/primitive_blast_furnace"))
+            .register();
+
+    public static final MultiblockMachineDefinition ROCK_BLASTER = REGISTRATE.multiblock("rock_blaster", RockBlasterMachine::new)
+            .rotationState(RotationState.NON_Y_AXIS)
+            .recipeType(GBTHCoreRecipeTypes.ROCK_BLASTER_RECIPES)
+            .appearanceBlock(CASING_PRIMITIVE_BRICKS)
+            .tooltips(Component.translatable("gtceu.machine.available_recipe_map_1.tooltip", Component.translatable("gbthcore.rock_blaster")))
+            .pattern(def -> FactoryBlockPattern.start()
+                    .aisle("##M##", "##M##", "#####")
+                    .aisle("#MDM#", "#MDM#", "##S##")
+                    .aisle("MDDDM", "MD#DM", "#S#S#")
+                    .aisle("#MDM#", "#MDM#", "##S##")
+                    .aisle("##M##", "##C##", "#####")
+                    .where("#", Predicates.air())
+                    .where("D", blockTag(BlockTags.DEEPSLATE_ORE_REPLACEABLES)) //todo: check
+                    .where("M", blocks(Blocks.MUD_BRICKS))
+                    .where("C", Predicates.controller(blocks(def.get())))
+                    .where("S", blocks(Blocks.MUD_BRICK_SLAB))
                     .build())
             .workableCasingModel(new ResourceLocation("block/mud_bricks"), GTCEu.id("block/multiblock/primitive_blast_furnace"))
             .register();

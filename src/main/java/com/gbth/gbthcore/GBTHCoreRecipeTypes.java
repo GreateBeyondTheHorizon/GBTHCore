@@ -21,6 +21,11 @@ public class GBTHCoreRecipeTypes {
             .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
             .setSound(GTSoundEntries.FURNACE);
 
+    public static final GTRecipeType ROCK_BLASTER_RECIPES = register("rock_blaster", MULTIBLOCK)
+            .setMaxIOSize(3, 2, 0, 0)
+            .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+            .setSound(GTSoundEntries.FURNACE);
+
 
     public static GTRecipeType register(String name, String group, RecipeType<?>... proxyRecipes) {
         GTRecipeType recipeType = new GTRecipeType(new ResourceLocation(GBTHCore.MODID, name), group, proxyRecipes);

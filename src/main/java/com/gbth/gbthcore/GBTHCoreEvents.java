@@ -1,11 +1,16 @@
 package com.gbth.gbthcore;
 
 import com.gbth.gbthcore.integration.gtceu.multiblocks.GBTHCoreMultiblocks;
+import com.gregtechceu.gtceu.api.data.chemical.ChemicalHelper;
+import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
+import com.gregtechceu.gtceu.common.data.GTMaterials;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.Tags.Items;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -18,15 +23,18 @@ public class GBTHCoreEvents {
 
     @SubscribeEvent
     public static void onBlockClicked(PlayerInteractEvent.RightClickBlock event) {
-        if(event.getLevel().getBlockState(event.getPos()).getBlock() == Blocks.CAMPFIRE) {
-            if(event.getItemStack().is(Blocks.MUD_BRICKS.asItem()) && event.getEntity().isCrouching()) {
-                BlockState state = GBTHCoreMultiblocks.BLOOMERY.defaultBlockState().setValue(HORIZONTAL_FACING, event.getEntity().getDirection().getOpposite());
-                event.getLevel().setBlock(event.getPos(), state, 2);
-                event.getEntity().getMainHandItem().setCount(event.getEntity().getMainHandItem().getCount() - 1);
-                event.getLevel().addParticle(ParticleTypes.EXPLOSION, event.getPos().getX(), event.getPos().getY() + 0.5, event.getPos().getZ(), 0, 0, 0);
-                event.getLevel().playSound(null, event.getPos(), SoundEvents.PLAYER_LEVELUP, SoundSource.BLOCKS);
-                event.setCanceled(true);
-            }
-        }
+        BlockState state;
+        if(event.getLevel().getBlockState(event.getPos()).getBlock() == Blocks.CAMPFIRE && event.getEntity().isCrouching()) {
+            if(event.getItemStack().is(Items.RAW_MATERIALS)) {
+                state = GBTHCoreMultiblocks.BLOOMERY.defaultBlockState().setValue(HORIZONTAL_FACING, event.getEntity().getDirection().getOpposite());
+            } else if(event.getItemStack().is(ChemicalHelper.get(TagPrefix.dust, GTMaterials.RockSalt).getItem())) {
+                state = GBTHCoreMultiblocks.ROCK_BLASTER.defaultBlockState().setValue(HORIZONTAL_FACING, event.getEntity().getDirection().getOpposite());
+            } else return;
+        } else return;
+        event.getLevel().setBlock(event.getPos(), state, Block.UPDATE_CLIENTS);
+        event.getEntity().getMainHandItem().setCount(event.getEntity().getMainHandItem().getCount() - 1);
+        event.getLevel().addParticle(ParticleTypes.EXPLOSION, event.getPos().getX(), event.getPos().getY() + 0.5, event.getPos().getZ(), 0, 0, 0);
+        event.getLevel().playSound(null, event.getPos(), SoundEvents.PLAYER_LEVELUP, SoundSource.BLOCKS);
+        event.setCanceled(true);
     }
 }

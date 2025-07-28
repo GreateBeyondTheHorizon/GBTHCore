@@ -7,6 +7,7 @@ public class LangHandler {
 		ConfigurationLang.register(provider);
 
 		provider.add("gbthcore.bloomery", "Bloomery");
+		provider.add("gbthcore.rock_blaster", "Rock Blaster");
 		provider.add("tagprefix.bloom", "%s Bloom");
 	}
 }
