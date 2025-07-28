@@ -1,9 +1,6 @@
 package com.gbth.gbthcore;
 
 import com.gbth.gbthcore.integration.gtceu.multiblocks.GBTHCoreMultiblocks;
-import com.gregtechceu.gtceu.api.data.chemical.ChemicalHelper;
-import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
-import com.gregtechceu.gtceu.common.data.GTMaterials;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -27,7 +24,7 @@ public class GBTHCoreEvents {
         if(event.getLevel().getBlockState(event.getPos()).getBlock() == Blocks.CAMPFIRE && event.getEntity().isCrouching()) {
             if(event.getItemStack().is(Items.RAW_MATERIALS)) {
                 state = GBTHCoreMultiblocks.BLOOMERY.defaultBlockState().setValue(HORIZONTAL_FACING, event.getEntity().getDirection().getOpposite());
-            } else if(event.getItemStack().is(ChemicalHelper.get(TagPrefix.dust, GTMaterials.RockSalt).getItem())) {
+            } else if(event.getItemStack().is(Blocks.COBBLED_DEEPSLATE.asItem())) {
                 state = GBTHCoreMultiblocks.ROCK_BLASTER.defaultBlockState().setValue(HORIZONTAL_FACING, event.getEntity().getDirection().getOpposite());
             } else return;
         } else return;

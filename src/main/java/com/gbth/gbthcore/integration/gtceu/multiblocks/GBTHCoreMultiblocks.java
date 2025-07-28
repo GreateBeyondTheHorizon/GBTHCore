@@ -13,11 +13,9 @@ import com.gregtechceu.gtceu.common.data.GTRecipeTypes;
 import com.gregtechceu.gtceu.common.machine.multiblock.steam.SteamParallelMultiblockMachine;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
 
 import static com.gbth.gbthcore.registry.GBTHCoreRegistries.REGISTRATE;
-import static com.gregtechceu.gtceu.api.pattern.Predicates.blockTag;
 import static com.gregtechceu.gtceu.api.pattern.Predicates.blocks;
 import static com.gregtechceu.gtceu.common.data.GTBlocks.*;
 
@@ -56,7 +54,7 @@ public class GBTHCoreMultiblocks {
                     .aisle("#MDM#", "#MDM#", "##S##")
                     .aisle("##M##", "##C##", "#####")
                     .where("#", Predicates.air())
-                    .where("D", blockTag(BlockTags.DEEPSLATE_ORE_REPLACEABLES)) //todo: check
+                    .where("D", blocks(Blocks.COBBLED_DEEPSLATE))
                     .where("M", blocks(Blocks.MUD_BRICKS))
                     .where("C", Predicates.controller(blocks(def.get())))
                     .where("S", blocks(Blocks.MUD_BRICK_SLAB))
