@@ -7,17 +7,23 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import earth.terrarium.heracles.api.CustomizableQuestElement;
 import earth.terrarium.heracles.api.quests.QuestIcon;
 import earth.terrarium.heracles.api.quests.QuestIcons;
+import earth.terrarium.heracles.api.quests.defaults.ItemQuestIcon;
 import earth.terrarium.heracles.api.tasks.QuestTask;
 import earth.terrarium.heracles.api.tasks.QuestTaskType;
 import earth.terrarium.heracles.api.tasks.storage.defaults.IntegerTaskStorage;
 import net.minecraft.nbt.NumericTag;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.fluids.capability.IFluidHandlerItem;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.Optional;
 
 public record GatherFluidTask(String id, String title, QuestIcon<?> icon, Fluid fluid, int requiredAmount) implements QuestTask<ItemStack, NumericTag, GatherFluidTask>, CustomizableQuestElement {
 
@@ -26,15 +32,14 @@ public record GatherFluidTask(String id, String title, QuestIcon<?> icon, Fluid 
     @Override
     public NumericTag test(QuestTaskType<?> type, NumericTag progress, ItemStack input) {
         int amount = 0;
-        //TODO: may need to check both fluid caps (blocks/items)
-            IFluidHandlerItem fluidCap = input.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).orElse(null);
-            if(fluidCap != null) {
-                for(int j = 0; j < fluidCap.getTanks(); j++) {
-                    if(this.fluid.isSame(fluidCap.getFluidInTank(j).getFluid())) {
-                        amount += fluidCap.getFluidInTank(j).getAmount();
-                    }
+        IFluidHandlerItem fluidCap = input.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).orElse(null);
+        if(fluidCap != null) {
+            for(int j = 0; j < fluidCap.getTanks(); j++) {
+                if(this.fluid.isSame(fluidCap.getFluidInTank(j).getFluid())) {
+                    amount += fluidCap.getFluidInTank(j).getAmount();
                 }
             }
+        }
         return storage().set(amount * input.getCount());
     }
 
@@ -55,6 +60,13 @@ public record GatherFluidTask(String id, String title, QuestIcon<?> icon, Fluid 
 
     @Override
     public QuestIcon<?> icon() {
+        if(icon instanceof ItemQuestIcon iqi) {
+            Optional<ItemStack> stack = iqi.item().item().left();
+            Optional<TagKey<Item>> tag = iqi.item().item().right();
+            if(stack.isPresent()) {
+                if(!stack.get().is(Items.AIR)) return icon;
+            } else if(tag.isPresent()) return icon;
+        }
         return new FluidQuestIcon(this.fluid);
     }
 
@@ -69,8 +81,8 @@ public record GatherFluidTask(String id, String title, QuestIcon<?> icon, Fluid 
         public Codec<GatherFluidTask> codec(String id) {
             return RecordCodecBuilder.create(i -> i.group(
                     RecordCodecBuilder.point(id),
-                    Codec.STRING.optionalFieldOf("title", "").forGetter(GatherFluidTask::title),
-                    QuestIcons.CODEC.optionalFieldOf("icon", new FluidQuestIcon(Fluids.EMPTY)).orElse(new FluidQuestIcon(Fluids.WATER)).forGetter(GatherFluidTask::icon),
+                    Codec.STRING.fieldOf("title").orElse("").forGetter(GatherFluidTask::title),
+                    QuestIcons.CODEC.fieldOf("icon").orElse(new FluidQuestIcon(Fluids.EMPTY)).forGetter(GatherFluidTask::icon),
                     ForgeRegistries.FLUIDS.getCodec().fieldOf("fluid").forGetter(GatherFluidTask::fluid),
                     Codec.INT.fieldOf("amount").forGetter(GatherFluidTask::requiredAmount)
             ).apply(i, GatherFluidTask::new));

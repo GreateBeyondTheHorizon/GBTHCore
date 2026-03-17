@@ -34,7 +34,7 @@ public class FluidTaskSettings implements SettingInitializer<GatherFluidTask>, C
     }
 
     private static Fluid getDefaultFluid(GatherFluidTask object) {
-        return Optionull.mapOrDefault(object, GatherFluidTask::fluid, Fluids.WATER);
+        return Optionull.mapOrDefault(object, GatherFluidTask::fluid, Fluids.EMPTY);
     }
 
     private static int getDefaultCount(GatherFluidTask object) {
