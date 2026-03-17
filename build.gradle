@@ -114,6 +114,14 @@ repositories {
             includeGroup 'dev.emi'
         }
     }
+    maven { url = "https://maven.teamresourceful.com/repository/maven-public/"
+        content {
+            includeGroup 'earth.terrarium.heracles'
+            includeGroup 'earth.terrarium.hermes'
+            includeGroup 'com.teamresourceful.resourcefullib'
+        }
+    }
+    maven { url = "https://maven.bawnorton.com/releases" }
 }
 
 dependencies {
@@ -137,12 +145,21 @@ dependencies {
     implementation fg.deobf("com.gregtechceu.gtceu:gtceu-${minecraft_version}:${gtceu_version}:slim") { transitive = false }
     implementation fg.deobf("dev.toma.configuration:configuration-forge-${minecraft_version}:${configuration_version}")
 
+    implementation fg.deobf("curse.maven:resourcefullib-570073:${resourcefullib_version}")
+    implementation fg.deobf("earth.terrarium.hermes:hermes-forge-1.20:${hermes_version}") { transitive = false }
+    implementation fg.deobf("earth.terrarium.heracles:heracles-forge-${minecraft_version}:${heracles_version}") { transitive = false }
+
     compileOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}+${minecraft_version}:api"))
     runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}+${minecraft_version}"))
     implementation fg.deobf("curse.maven:aether-255308:${aether_version}")
 
-    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.3.2"))
-    implementation fg.deobf("io.github.llamalad7:mixinextras-forge:0.3.2")
+    compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:0.5.2"))
+    implementation fg.deobf("io.github.llamalad7:mixinextras-forge:0.5.2")
+
+    compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:0.3.7-beta.1"))
+    implementation(jarJar("com.github.bawnorton.mixinsquared:mixinsquared-neoforge:0.3.7-beta.1")) {
+        jarJar.ranged(it, "[0.3.7-beta.1,)")
+    }
 }
 
 mixin {

@@ -13,5 +13,8 @@
   "item.gbthcore.prospector_luv": ")ΛnꞀ( ɹoʇɔǝdsoɹԀ ɹǝdnS",
   "item.gbthcore.prospector_lv": ")ΛꞀ( ɹoʇɔǝdsoɹԀ ǝɹO",
   "itemGroup.gbthcore.machine": "sǝuıɥɔɐW ǝɹoƆH⟘ᗺ⅁",
-  "tagprefix.bloom": "ɯooןᗺ %s"
+  "tagprefix.bloom": "ɯooןᗺ %s",
+  "task.gbthcore.fluid.desc": "%s %s :ǝɹınbɔⱯ",
+  "task.gbthcore.fluid.title": "%s :ǝɹınbɔⱯ",
+  "task.gbthcore.fluid_task": "pınןℲ ǝɹınbɔⱯ"
 }

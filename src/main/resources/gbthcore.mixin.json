@@ -7,7 +7,9 @@
     "AbstractFurnaceBlockEntityMixin",
     "AetherBlocksMixin",
     "CampfireBlockMixin",
+    "InventoryMixin",
     "ProspectorScannerBehaviorAccessor",
+    "ServerPlayerMixin",
     "WaterFluidMixin"
   ],
   "injectors": {

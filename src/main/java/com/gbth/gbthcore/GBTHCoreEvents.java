@@ -1,7 +1,11 @@
 package com.gbth.gbthcore;
 
 import com.gbth.gbthcore.integration.gtceu.multiblocks.GBTHCoreMultiblocks;
+import com.gbth.gbthcore.integration.heracles.tasks.GatherFluidTask;
+import earth.terrarium.heracles.common.handlers.progress.QuestProgressHandler;
+import earth.terrarium.heracles.common.handlers.progress.QuestsProgress;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.level.block.Block;
@@ -9,6 +13,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.Tags.Items;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
@@ -33,5 +38,15 @@ public class GBTHCoreEvents {
         event.getLevel().addParticle(ParticleTypes.EXPLOSION, event.getPos().getX(), event.getPos().getY() + 0.5, event.getPos().getZ(), 0, 0, 0);
         event.getLevel().playSound(null, event.getPos(), SoundEvents.PLAYER_LEVELUP, SoundSource.BLOCKS);
         event.setCanceled(true);
+    }
+
+    @SubscribeEvent(priority = EventPriority.LOWEST)
+    public static void onTankClicked(PlayerInteractEvent.RightClickBlock event) {
+        if(event.getEntity() instanceof ServerPlayer serverPlayer) {
+            serverPlayer.getServer().execute(() -> {
+                QuestsProgress progress = QuestProgressHandler.getProgress(serverPlayer.getServer(), serverPlayer.getUUID());
+                progress.testAndProgressTaskType(serverPlayer, event.getEntity().getMainHandItem(), GatherFluidTask.FLUID_TASK_TYPE);
+            });
+        }
     }
 }

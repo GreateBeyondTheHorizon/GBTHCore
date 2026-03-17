@@ -13,5 +13,8 @@
   "item.gbthcore.prospector_luv": "Super Prospector (LuV)",
   "item.gbthcore.prospector_lv": "Ore Prospector (LV)",
   "itemGroup.gbthcore.machine": "GBTHCore Machines",
-  "tagprefix.bloom": "%s Bloom"
+  "tagprefix.bloom": "%s Bloom",
+  "task.gbthcore.fluid.desc": "Acquire: %s %s",
+  "task.gbthcore.fluid.title": "Acquire: %s",
+  "task.gbthcore.fluid_task": "Acquire Fluid"
 }

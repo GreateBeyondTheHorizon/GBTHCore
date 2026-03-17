@@ -1,11 +1,11 @@
-// 1.20.1	2025-07-27T17:24:01.933535201	Registrate Provider for gbthcore [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
-6747a2aa82f418ef64c33c4529e230201f2c1795 assets/gbthcore/blockstates/bloomery.json
-eb09ad3017af39156b5d904b1b3ee0c52d7b92ae assets/gbthcore/blockstates/rock_blaster.json
-6ffb4da49f51736a25ee689144703567766ff747 assets/gbthcore/blockstates/steam_alloy_smelter.json
-8df8a407945db6378e6ce4add15f9ed197afd435 assets/gbthcore/blockstates/steam_centrifuge.json
-a9d67c9617abce4759edf83cd0de9b160d3aef55 assets/gbthcore/blockstates/steam_extractor.json
-e0442da2df5046efaf04f100bb4bd267786bc1f3 assets/gbthcore/lang/en_ud.json
-80334dff08af7eb337ead105991ba2a32b006808 assets/gbthcore/lang/en_us.json
+// 1.20.1	2026-03-16T20:45:46.029135265	Registrate Provider for gbthcore [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider]
+aae7f284de4ab01bbeeef7267de1b5e623e06882 assets/gbthcore/blockstates/bloomery.json
+3e1db16f68009c2a1680864420696cf200dcc1b1 assets/gbthcore/blockstates/rock_blaster.json
+2682e9b23bcca5fa439f7eedd01a2be1a0c74da7 assets/gbthcore/blockstates/steam_alloy_smelter.json
+f2a45d3449f3144669731f3176e10fd5824a985d assets/gbthcore/blockstates/steam_centrifuge.json
+a440caa55cc1cbc9a9001d3d8a4b938c09e0dc4b assets/gbthcore/blockstates/steam_extractor.json
+fe42ae6f1c408adfd4a3003153d1238ee2350aad assets/gbthcore/lang/en_ud.json
+db19bf73be17a56ee9be146d08594edafcf85087 assets/gbthcore/lang/en_us.json
 03290464fad45d8d073e658d09cb25ea9b8940fa assets/gbthcore/models/block/machine/bloomery.json
 6bab280b52e42ec6e8700ec8af07384d96f28638 assets/gbthcore/models/block/machine/rock_blaster.json
 2b4d2e02bd64354f36e044ce967a3905851af1c7 assets/gbthcore/models/block/machine/steam_alloy_smelter.json
